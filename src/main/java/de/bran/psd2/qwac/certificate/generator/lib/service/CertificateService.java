@@ -234,7 +234,7 @@ public class CertificateService {
             serialNumber, new Date(), expiration, cerData.isOcspCheckNeeded());
     }
 
-    protected KeyPair generateKeyPair() {
+    public KeyPair generateKeyPair() {
         try {
             KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
             keyGen.initialize(2048, SecureRandom.getInstance("SHA1PRNG", "SUN"));

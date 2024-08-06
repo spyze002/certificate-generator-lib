@@ -41,7 +41,7 @@ Open the `pom.xml` file of the new project and add a dependency for your library
 ```xml
 <dependencies>
     <dependency>
-        <groupId>de.adorsys.psd2.qwac</groupId>
+        <groupId>de.bran.psd2.qwac</groupId>
         <artifactId>certificate-generator-lib</artifactId>
         <version>4.2</version>
     </dependency>
