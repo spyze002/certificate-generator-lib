@@ -1,0 +1,31 @@
+server:
+  # Authorization HTTP header requires to enlarge max header size.
+  max-http-request-header-size: 65000
+  port: 8092
+
+spring:
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+qwac:
+  certificate-generator:
+    template:
+      public:
+        key:
+          "certificates/MyRootCA.key"
+      private:
+        key:
+          "certificates/MyRootCA.pem"
+
+
+# Cors configuration
+management:
+  endpoints:
+    web:
+      cors:
+        allow-credentials: false
+        allowed-headers: Access-Control-Allow-Headers, Content-Type, Origin, X-Requested-With, Cookie
+        allowed-methods: GET,POST,PUT,DELETE,OPTIONS,PATCH
+        max-age: 3600
+        allowed-origin-patterns: "*"
